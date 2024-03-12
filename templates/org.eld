@@ -9,7 +9,7 @@ org-mode
 (vrs & "#+begin_verse" n> r> n> "#+end_verse")
 (src & "#+begin_src " p n r n "#+end_src" :post (org-edit-src-code))
 (rst & "#+begin_src restclient" p n r n "#+end_src" :post (org-edit-src-code))
-(elsp & "#+begin_src emacs-lisp" n r n "#+end_src" :post (org-edit-src-code))
+(shell & "#+begin_src shell" n r n "#+end_src" :post (org-edit-src-code))
 (readonly ":tangle yes :tangle-mode (identity #o444) :mkdirp yes" n)
 (oxhugo & ":PROPERTIES:"  n ":EXPORT_FILE_NAME: " (p "Simple Filename") n ":EXPORT_DATE: " (format-time-string "%Y-%m-%d") n ":EXPORT_HUGO_DRAFT: false" n ":END:")
 (readmecollapse  "*** " (p "Heading") n "#+HTML: <details> <summary> " (p "sub-heading")  " </summary>" n (r> "link or any comments") n n "#+HTML: </details>" n)
@@ -32,4 +32,3 @@ org-mode
 (elisp & "#+begin_src emacs-lisp" n r n "#+end_src" :post (org-edit-src-code))
 (inlsrc "src_" p "{" q "}")
 (title & "#+title: " p n "#+author: " p n "#+language: " p n n)
-
